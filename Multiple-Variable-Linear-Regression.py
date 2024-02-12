@@ -69,7 +69,12 @@ print(f"x_vec shape \x1b[1;33m{x_vec.shape}\x1b[0m, x_vec value: \x1b[1;33m{x_ve
 print(f"f_wb shape \x1b[1;33m{f_wb.shape}\x1b[0m, prediction: \x1b[1;33m{f_wb}\x1b[0m")
 print("\x1b[1;34m---  prediction example end  ---\x1b[0m")
 
+# COST FC ---- example w/ a good and a bad precalculated w and b
 cost = compute_cost(X_train, y_train, w_init, b_init)
+b_bad = 0
+w_bad = np.array([ 0, 0, 0, 0])
+cost_bad = compute_cost(X_train, y_train, w_bad, b_bad)
 print("\x1b[1;34m--- cost fc example start ---\x1b[0m")
 print(f"cost at optimal w \x1b[1;33m{cost}\x1b[0m")
+print(f"cost at bad w \x1b[1;33m{cost_bad}\x1b[0m")
 print("\x1b[1;34m---  cost fc example end  ---\x1b[0m")
